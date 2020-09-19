@@ -46,7 +46,7 @@ public class FetchTest {
 	@Test
 	public void testBird() {
 		log.info("--------> Bird");
-		Bird bird = birdRepository.findOne(1L);
+		Bird bird = birdRepository.findById(1L).get();
 		log.info("--------> Specie unidirectional OneToOne");
 		bird.getSpecie().getName();
 		log.info("--------> Picture - Lob Basic");
@@ -66,7 +66,7 @@ public class FetchTest {
 	@Test
 	public void testAward() {
 		log.info("--------> Award");
-		Award award = awardRepository.findOne(1L);
+		Award award = awardRepository.findById(1L).get();
 		log.info("--------> Bird bidirectional @ManyToOne");
 		award.getBird().getBand();
 	}
@@ -74,7 +74,7 @@ public class FetchTest {
 	@Test
 	public void testBreeder() {
 		log.info("--------> Breeder");
-		Breeder breeder = breederRepository.findOne(1L);
+		Breeder breeder = breederRepository.findById(1L).get();
 		log.info("--------> Birds bidirectional OneToMany");
 		breeder.getBirds().size();
 	}
@@ -82,14 +82,14 @@ public class FetchTest {
 	@Test
 	public void testCage() {
 		log.info("--------> Cage");
-		Cage cage = cageRepository.findOne(1l);
+		Cage cage = cageRepository.findById(1l).get();
 		log.info("--------> Bird bidirectional OneToOne");
 		cage.getBird().getBand();
 	}
 
 	@Test
 	public void testTeatments() {
-		treatmentRepository.findOne(1l).getBirds().size();
+		treatmentRepository.findById(1l).get().getBirds().size();
 	}
 
 }
