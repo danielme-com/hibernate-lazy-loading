@@ -1,6 +1,6 @@
 package com.danielme.blog.hibernatefetching.entities;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -41,7 +41,7 @@ public class Cage {
 
     public void setBird(Bird bird) {
         if (birds == null) {
-        	birds = new LinkedList<>();
+        	birds = new ArrayList<>();
         }
         birds.set(0, bird);
     } */  
