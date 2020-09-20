@@ -1,7 +1,8 @@
 package com.danielme.blog.hibernatefetching;
 
 import com.danielme.blog.hibernatefetching.entities.*;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +17,7 @@ public class FetchTest {
             .createEntityManagerFactory("BirdsPersistence");
     private static EntityManager entityManager;
 
-    private static final Logger log = Logger.getLogger(FetchTest.class);
+    private static final Logger log = LogManager.getLogger(FetchTest.class);
 
     @Before
     public void setup() {
