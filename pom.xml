@@ -18,7 +18,7 @@
         <hibernate.version>5.4.21.Final</hibernate.version>
         <log4j2.version>2.13.3</log4j2.version>
         <mysql.driver.version>8.0.21</mysql.driver.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13</junit.version>
 
         <enforcer.plugin>1.4.1</enforcer.plugin>
         <maven.compiler.plugin.version>3.6.1</maven.compiler.plugin.version>
