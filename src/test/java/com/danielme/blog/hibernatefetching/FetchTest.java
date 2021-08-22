@@ -32,7 +32,7 @@ public class FetchTest {
     @Test
     public void testBird() {
         log.info("--------> Bird");
-        Bird bird = entityManager.find(Bird.class, 1L);;
+        Bird bird = entityManager.find(Bird.class, 1L);
         log.info("--------> Specie unidirectional OneToOne");
         bird.getSpecie().getName();
         log.info("--------> Picture - Lob Basic");
