@@ -36,7 +36,8 @@ public class Bird {
     private String band;
 
     // unidirectional
-    @OneToOne     
+    @OneToOne(optional = false)
+    //@OneToOne(optional = false, fetch = FetchType.LAZY)
     //@LazyToOne(LazyToOneOption.NO_PROXY)
     //@LazyGroup( "specie" )
     @JoinColumn(name = "specie_id")
@@ -44,7 +45,7 @@ public class Bird {
 
     // bidirectional
     @OneToOne
-    //@OneToOne(optional=false, fetch=FetchType.LAZY)   
+    //@OneToOne(fetch=FetchType.LAZY)   
     //@LazyToOne(LazyToOneOption.NO_PROXY)
     //@LazyGroup( "cage" )
     @JoinColumn(name = "cage_id")
@@ -75,6 +76,10 @@ public class Bird {
     @Basic(fetch=FetchType.LAZY)
     @Lob    
     private byte[] picture;
+    
+    @OneToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name = "picture_id")
+    private Picture pictureEntity;
 
     public Long getId() {
         return id;
@@ -148,7 +153,13 @@ public class Bird {
 		this.picture = picture;
 	}
 
+    public Picture getPictureEntity() {
+        return pictureEntity;
+    }
 
+    public void setPictureEntity(Picture pictureEntity) {
+        this.pictureEntity = pictureEntity;
+    }
 
     
 }

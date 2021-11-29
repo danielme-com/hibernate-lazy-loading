@@ -77,5 +77,13 @@ public class FetchTest {
     public void testTeatments() {
         entityManager.find(Treatment.class, 1L).getBirds().size();
     }
+    
+    @Test
+    public void testPictureEntity() {
+        log.info("--------> Bird");
+        Bird bird = entityManager.find(Bird.class, 1L);
+        log.info("--------> Picture entity");
+        bird.getPictureEntity().getPicture();       
+    }
 
 }
