@@ -16,7 +16,7 @@
         <maven.version>3.0</maven.version>
 
         <hibernate.version>5.4.21.Final</hibernate.version>
-        <log4j2.version>2.13.3</log4j2.version>
+        <log4j2.version>2.15.0</log4j2.version>
         <mysql.driver.version>8.0.21</mysql.driver.version>
         <junit.version>4.13.1</junit.version>
 
